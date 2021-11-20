@@ -1,0 +1,14 @@
+{
+  "name": "getBackYourTokens",
+  "version": "0.0.1",
+  "description": "UI to interact with DaoMaker's vault contract to withdraw your tokens.",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "4kihito",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

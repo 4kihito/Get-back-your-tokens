@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Get back your tokens!</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns" style="margin-top: 25%">
+        <h1>Get back your tokens</h1>
+        <p></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns">
+        <h5 id="connectText">But first, connect your wallet!</h5>
+        <input class="button-primary" type="button" id="connectBTN" value="Connect" disabled>
+      </div>
+    </div>
+    <div class="row">
+      <div class="twelve columns"><h5>
+      IMPORTANT! The order of the transactions must be followed. 
+      The 'unstake' function call, unstakes the other tokens, after this you can withdraw the DaoMaker tokens. </h5>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one-half column" style="margin-top: 1%">
+        <h4>First Transaction</h4>
+        <p>The first transaction that we have to send is <code>unstake</code> to get the remaining NON DaoMaker tokens from the vault.</p>
+        <p>If Metamask is showing absurd amount of gas estimate, most likely you already have sent a unstake transaction, than you can skip it and try sending the withdraw transaction directly. </p>
+        <input class="button-primary" type="submit" id="unstakeBTN" value="Unstake" disabled>
+        <p id='statusUnstake'></p>
+      </div>
+      <div class="one-half column" style="margin-top: 1%">
+        <h4>Second Transaction</h4>
+        <p>We just need to call the <code>withdraw</code> function and you will be getting back your DaoMaker tokens.</p>
+        <input class="button-primary" type="submit" id="withdrawBTN" value="Withdraw" disabled>
+      </div>
+    </div>
+  </div>
+
+<!-- End Document
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script type="module" src="./index.js" > </script>
+</body>
+</html>
