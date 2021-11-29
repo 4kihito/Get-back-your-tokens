@@ -1,7 +1,6 @@
 const contractAddress = '0xE33B15629739770a27c4726a22BE61128aa1c781';
-const unstakeFirstTxHex = '0x2e17de780000000000000000000000000000000000000000000000000000000000000000';
-const withdrawSecondTxHex = '0x2e1a7d4d0000000000000000000000000000000000000000000000000000000000000001';
-// const unstakeFirstTxHex = '0xe97dcb62';
+const withdrawHex = '0x2e1a7d4d0000000000000000000000000000000000000000000000000000000000000000';
+const unstakeHex = '0x2e17de780000000000000000000000000000000000000000000000000000000000000000';
 const connectBTN = document.getElementById('connectBTN');
 const unstakeBTN = document.getElementById('unstakeBTN');
 const withdrawBTN = document.getElementById('withdrawBTN');
@@ -41,7 +40,7 @@ const initialize = async () => {
                                         {
                                             from: accounts[0],
                                             to: contractAddress,
-                                            data: unstakeFirstTxHex,
+                                            data: unstakeHex,
                                             gasLimit: '300000',
                                             type: '2',
                                             value: '0'
@@ -72,7 +71,7 @@ const initialize = async () => {
                                             {
                                                 from: accounts[0],
                                                 to: contractAddress,
-                                                data: withdrawSecondTxHex,
+                                                data: withdrawHex,
                                                 gasLimit: '300000',
                                                 type: '2',
                                                 value: '0'

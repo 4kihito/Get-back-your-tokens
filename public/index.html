@@ -37,30 +37,40 @@
     <div class="row">
       <div class="twelve columns">
         <h5 id="connectText">But first, connect your wallet!</h5>
-        <input class="button-primary" type="button" id="connectBTN" value="Connect" disabled>
+        <input class="button-primary" type="button" id="connectBTN" value="Connect">
       </div>
     </div>
     <div class="row">
       <div class="twelve columns"><h5>
-      IMPORTANT! The order of the transactions must be followed. 
-      The 'unstake' function call, unstakes the other tokens, after this you can withdraw the DaoMaker tokens. </h5>
+      IMPORTANT! The order of the transactions must be followed.</h5>
       </div>
     </div>
     <div class="row">
       <div class="one-half column" style="margin-top: 1%">
         <h4>First Transaction</h4>
-        <p>The first transaction that we have to send is <code>unstake</code> to get the remaining NON DaoMaker tokens from the vault.</p>
+        <p>The first transaction that we have to send is <code>withdraw</code> to get the remaining NON DaoMaker tokens from the vault, at the moment this is just the YIELD token.</p>
         <p>If Metamask is showing absurd amount of gas estimate, most likely you already have sent a unstake transaction, than you can skip it and try sending the withdraw transaction directly. </p>
-        <input class="button-primary" type="submit" id="unstakeBTN" value="Unstake" disabled>
+        <input class="button-primary" type="submit" id="withdrawBTN" value="Withdraw" disabled>
         <p id='statusUnstake'></p>
       </div>
       <div class="one-half column" style="margin-top: 1%">
         <h4>Second Transaction</h4>
-        <p>We just need to call the <code>withdraw</code> function and you will be getting back your DaoMaker tokens.</p>
-        <input class="button-primary" type="submit" id="withdrawBTN" value="Withdraw" disabled>
+        <p>We just need to call the <code>Unstake</code> function and you will be getting back your DaoMaker tokens.</p>
+        <input class="button-primary" type="submit" id="unstakeBTN" value="Unstake" disabled>
+      </div>
+    </div>
+    <div class="row">
+      <div class="one-third column" style="margin-top: 1%">
+
+      </div>
+      <div class="one-third column" style="margin-top: 1%">
+        <a href="https://github.com/4kihito/Get-back-your-tokens">Source code</a>
+      </div>
+      <div class="one-third column" style="margin-top: 1%">
       </div>
     </div>
   </div>
+</div>
 
 <!-- End Document
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
