@@ -1,13 +1,14 @@
-const contractAddress = '0xE33B15629739770a27c4726a22BE61128aa1c781';
-const withdrawHex = '0x2e1a7d4d0000000000000000000000000000000000000000000000000000000000000000';
+const contractAddress = '0xE33B15629739770a27c4726a22BE61128aa1c781'; //Addy of V1 Vault
+const withdrawHex = '0x2e1a7d4d0000000000000000000000000000000000000000000000000000000000000000'; 
 const unstakeHex = '0x2e17de780000000000000000000000000000000000000000000000000000000000000000';
+// Setting up the buttons
 const connectBTN = document.getElementById('connectBTN');
 const unstakeBTN = document.getElementById('unstakeBTN');
 const withdrawBTN = document.getElementById('withdrawBTN');
 
-const scanURL = "<a href'https://etherscan.io/tx/' "
 
-const initialize = async () => {
+// Checking to see if Metamask is installed
+const initialize = async () => { 
     var accounts;
     console.table(connectBTN);
     var metamaskInstalled = false;
@@ -17,7 +18,7 @@ const initialize = async () => {
         console.table(metamaskInstalled);
     }
 
-   
+//    Handling the connect button and letting the user connect with MetaMask
     const onClickConnect = async () => {
         if (metamaskInstalled === true ){
             accounts = await ethereum.request({ method: 'eth_requestAccounts' });
@@ -31,6 +32,7 @@ const initialize = async () => {
         } 
     }
 
+//  If there is an account connected proceed with sending the transaction
     const onClickUnstake = async () =>{
                             if(accounts.length > 0){
                                 ethereum
@@ -46,13 +48,6 @@ const initialize = async () => {
                                             value: '0'
                                         }
                                         ]
-                                    })
-                                    .then((result) => {
-                                        document.getElementById('statusUnstake').innerHTML = scanURL + result + " /a>";
-                                        // console.log('result');
-                                        // console.table(result);
-                                        // The result varies by RPC method.
-                                        // For example, this method will return a transaction hash hexadecimal string on success.
                                     })
                                     .catch((error) => {
                                         console.log('error');
@@ -77,13 +72,6 @@ const initialize = async () => {
                                                 value: '0'
                                             }
                                             ]
-                                        })
-                                        .then((result) => {
-                                            document.getElementById('statusWithdraw').innerHTML = scanURL + result + " /a>";
-                                            // console.log('result');
-                                            // console.table(result);
-                                            // The result varies by RPC method.
-                                            // For example, this method will return a transaction hash hexadecimal string on success.
                                         })
                                         .catch((error) => {
                                             console.log('error');
